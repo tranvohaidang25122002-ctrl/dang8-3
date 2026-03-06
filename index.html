@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gửi Nàng 8/3 ✨</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@500;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="petals-container"></div>
+<audio id="music" loop>
+  <source src="audio/dang.mp3" type="audio/mpeg">
+</audio>
+
+<div class="card" id="screen0">
+
+    <div class="title">Chào cậu...</div>
+
+    <p class="message">Cho mình biết tên của cậu nhé?</p>
+
+    <div class="input-group">
+        <input 
+        type="text"
+        id="userName"
+        class="input-cute"
+        placeholder="Nhập tên ở đây nè..."
+        autocomplete="off">
+    </div>
+
+    <!-- upload ảnh -->
+    <div class="upload-box">
+
+        <label for="imageUpload" class="upload-label">
+        📷 Cho tớ một tấm ảnh xinh đẹp nhất nha
+        </label>
+
+        <input type="file" id="imageUpload" accept="image/*" hidden>
+
+        <div class="preview-container">
+            <img id="previewImage" src="" alt="">
+        </div>
+
+    </div>
+
+    <button class="btn-cute shiny" onclick="saveName()">
+        Xác nhận ✓
+    </button>
+
+</div>
+
+    <div class="card hidden" id="screen2">
+        <div id="flowerSection">
+            <div class="title">Ví dụ như giờ có 1 cây bông rớt dô đầu cậu thì cậu thích nó là bông gì ?🌷</div>
+            <div class="flower-container">
+                <img src="images/flowers.png" class="flowers" alt="Flowers">
+                <div class="flower-area flower1" onclick="selectFlower(1)"></div>
+                <div class="flower-area flower2" onclick="selectFlower(2)"></div>
+                <div class="flower-area flower3" onclick="selectFlower(3)"></div>
+            </div>
+        </div>
+        <div id="result" class="hidden">
+            <div id="wishText" class="message typewriter"></div>
+            <button class="btn-continue" id="btn-next" style="display:none;" onclick="nextScreen()">Còn nữa... <i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <div class="card hidden" id="screen3">
+        <div class="title">8/3 zui zẻ ❤️ <i class="fa-solid fa-sun"></i></div>
+        <div class="message typewriter" id="final-message"></div>
+        <div class="btn-group">
+            <button class="btn-skip-fancy hidden-btn" id="btn-reveal" onclick="showMystery()">
+                <span>Khám phá điều bí mật</span>
+                <i class="fa-solid fa-circle-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <div id="mystery-overlay" class="hidden">
+        <div class="typewriter-mystery" id="mystery-text"></div>
+    </div>
+
+    <div id="flower-bouquet-screen" class="hidden">
+        <div class="title-bouquet">Tặng cậu bó hoa đẹp nhất thế giới nè , chúc cậu 8/3 vui vẻ nhé! ✨🎁</div>
+       
+        
+        <div class="bouquet-wrapper">
+            <img src="images/hoa.jpg" class="tulip-image" alt="Flower">
+            <div id="names-overlay"></div>
+        </div>
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</body>
+<div id="intro">
+
+    <div class="stars"></div>
+
+    <div class="intro-box">
+
+        <h1 id="introText">Anh có điều muốn nói với em</h1>
+
+        <p id="startClick">Click để bắt đầu ❤️</p>
+
+    </div>
+
+    <img src="images/superhero.png" id="hero">
+
+   <div id="sad">
+    <img src="images/sad.png" alt="quai vat">
+
+    <div class="sad-text">
+        ƯU PHIỀN CỦA CẬU
+    </div>
+</div>
+<script src="script.js"></script>
+</html>
